@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Game Structure</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #2c1500;
+      margin: 0;
+      padding: 50px;
+      height: 100vh; /* full viewport height */
+      display: flex;
+      flex-direction: column; /* stack items vertically */
+      justify-content: center; /* center vertically */
+      align-items: center
+    }
+    #game-container {
+      margin-top: 20px;
+      padding: 20px;
+      border: 2px solid #201000;
+      background-color: #5f3c1b;
+      display: none; /* hidden until Play is pressed */
+    }
+    button {
+      padding: 30px 40px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #5f3c1b;
+
+
+    /* 📱 Mobile view */
+    @media (max-width: 600px) {
+      .menu-container {
+        grid-template-columns: 1fr; /* stack vertically */
+      }
+      .level-box {
+        height: 120px;
+        font-size: 18px;
+    }
+  }
+}
+  </style>
+</head>
+<body>
+  <h1 style="color:#f7f4ef">MANLalakbay</h1>
+  <h2 style="color:antiquewhite">Walk through history. Discover its legacy.</h2>
+
+  <button id="play-btn">Play</button>
+
+  <div id="game-container">
+    <p>Game starts here!</p>
+    <!-- Add your game elements here -->
+  </div>
+
+  <script>
+    const playBtn = document.getElementById('play-btn');
+    const gameContainer = document.getElementById('game-container');
+
+    playBtn.addEventListener('click', () => {
+      playBtn.style.display = 'none'; // hide play button
+      gameContainer.style.display = 'block'; // show game area
+    });
+
+
+  </script>
+</body>
+</html>
